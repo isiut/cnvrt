@@ -37,9 +37,11 @@ fn main() {
         return;
     }
 
+    let formatted_value = format!("{:.3}", converted_value.1);
+
     println!(
-        "Please note: some values, especially ones converted between unit \
-        systems may return approximate results instead of exact results"
+        "Please note: some values, especially ones converted between unit
+systems may return approximate results instead of exact results\n"
     );
-    println!("{} {} = {} {}", value, from, converted_value.1, to);
+    println!("{} {} ≈ {} {}", value, from, formatted_value, to);
 }
